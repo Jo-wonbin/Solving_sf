@@ -14,7 +14,6 @@ public class BOJ_1753_최단경로 {
 	static class Node implements Comparable<Node> {
 		int end, weight;
 
-		
 		public Node(int end, int weight) {
 			super();
 			this.end = end;
