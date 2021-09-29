@@ -1,21 +1,22 @@
 package BOJ.floyd;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class BOJ_11404_플로이드 {
 
 	public static void main(String[] args) throws IOException {
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//		StringTokenizer st = null;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = null;
 
-		Scanner sc = new Scanner(System.in);
-//		st = new StringTokenizer(br.readLine(), " ");
-		int N = sc.nextInt();
-//		st = new StringTokenizer(br.readLine(), " ");
-		int K = sc.nextInt();
+		st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		st = new StringTokenizer(br.readLine());
+		int K = Integer.parseInt(st.nextToken());
 
-		final int INF = 100001;
+		final int INF = 10000001;
 
 		int map[][] = new int[N + 1][N + 1];
 		for (int i = 1; i <= N; i++) {
@@ -27,9 +28,10 @@ public class BOJ_11404_플로이드 {
 		}
 
 		for (int i = 0; i < K; i++) {
-			int start = sc.nextInt();
-			int end = sc.nextInt();
-			int weight = sc.nextInt();
+			st = new StringTokenizer(br.readLine(), " ");
+			int start = Integer.parseInt(st.nextToken());
+			int end = Integer.parseInt(st.nextToken());
+			int weight = Integer.parseInt(st.nextToken());
 
 			map[start][end] = Math.min(weight, map[start][end]);
 		}
@@ -66,7 +68,7 @@ public class BOJ_11404_플로이드 {
 
 		System.out.println(sb);
 
-		sc.close();
+		br.close();
 	}
 
 }
