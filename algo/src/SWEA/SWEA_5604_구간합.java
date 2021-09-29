@@ -13,7 +13,6 @@ public class SWEA_5604_구간합 {
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		int tc = Integer.parseInt(st.nextToken());
 		
-		
 		for (int k = 1; k <= tc; k++) {
 			st = new StringTokenizer(br.readLine(), " ");
 			long start = Long.parseLong(st.nextToken());
