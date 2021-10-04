@@ -1,4 +1,4 @@
-package BOJ.justdoit;
+package BOJ.simulation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
